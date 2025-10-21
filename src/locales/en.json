@@ -1,0 +1,23 @@
+{
+    "header": {
+        "top": "top",
+        "tools": "tools",
+        "works": "works",
+        "contact": "contact"
+    },
+    "top": {
+        "title": "title",
+        "text": "text",
+        "button": "button"
+    },
+    "tools": {
+        "title": "title"
+    },
+    "works": {
+        "title": "title",
+        "link_btn": "View Site"
+    },
+    "contact": {
+        "title": "title"
+    }
+}

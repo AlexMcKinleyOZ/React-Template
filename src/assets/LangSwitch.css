@@ -1,0 +1,25 @@
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: sans-serif;
+}
+
+.lang-switch button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 2px 6px;
+  transition: all 0.2s ease;
+}
+
+.lang-switch button.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.lang-switch button:hover {
+  opacity: 0.8;
+}

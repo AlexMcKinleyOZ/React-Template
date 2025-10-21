@@ -1,0 +1,16 @@
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: gold;
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-family: serif;
+}
+
+.btn:hover {
+  background-color: #ffd700cc;
+  transform: scale(1.05);
+}
