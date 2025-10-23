@@ -25,7 +25,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ img, alt, title, desc, link, tools 
                     <p>Tools: {tools}</p>
                 </div> 
             </div>
-            {/* <Button text={t('works.link_btn')} link={link}/> */}
+            <Button text={t('works.link_btn')} buttonLink={link} external />
         </div>
     );
 };

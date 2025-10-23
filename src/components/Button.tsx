@@ -3,21 +3,21 @@ import { Link } from 'react-router-dom';
 
 interface ButtonProps {
     text: string;
-    link: string;
+    buttonLink: string;
     external?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, link, external = false }) => {
+const Button: React.FC<ButtonProps> = ({ text, buttonLink, external = false }) => {
     if (external) {
         return (
-        <a href={link} target="_blank" rel="noopener noreferrer" className="btn">
+        <a href={buttonLink} target="_blank" rel="noopener noreferrer" className="btn">
             {text}
         </a>
         );
     }
 
     return (
-        <Link to={link} className="btn">
+        <Link to={buttonLink} className="btn">
             {text}
         </Link>
     );

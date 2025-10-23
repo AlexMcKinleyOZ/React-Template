@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import KV from './components/KV';
 import GridTools from './components/GridTools';
 import GridWorks from './components/GridWorks';
+import Contact from './components/Contact';
 
 
 const App: React.FC = () => {
@@ -15,9 +16,7 @@ const App: React.FC = () => {
         <KV />
         <GridTools />
         <GridWorks />
-
-        <section id="contact">
-        </section>
+        <Contact />
 
       </main>
     </div>
