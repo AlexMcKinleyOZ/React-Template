@@ -18,6 +18,8 @@
         "link_btn": "View Site"
     },
     "contact": {
-        "title": "title"
+        "title": "title",
+        "text": "contact text"
+
     }
 }

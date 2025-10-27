@@ -7,6 +7,7 @@ const Contact: React.FC = () => {
     return (
         <section id="contact" className="contact-section">
             <h2>{t('contact.title')}</h2>
+            <p>{t('contact.text')}</p>
         </section>
         );
     };
