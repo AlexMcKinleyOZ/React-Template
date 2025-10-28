@@ -1,7 +1,7 @@
 import React from 'react';
 import worksData from '../data/works.json';
 import WorkCard from './WorkCard';
-import '../assets/GridWorks.css';
+import '../assets/GridWorks.scss';
 import { useTranslation } from 'react-i18next'
 
 const GridWorks: React.FC = () => {

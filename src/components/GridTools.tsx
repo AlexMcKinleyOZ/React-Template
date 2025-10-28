@@ -1,7 +1,7 @@
 import React from 'react';
 import toolsData from '../data/tools.json';
 import ToolCard from './ToolCard';
-import '../assets/GridTools.css';
+import '../assets/GridTools.scss';
 import { useTranslation } from 'react-i18next'
 
 const GridTools: React.FC = () => {

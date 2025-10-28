@@ -1,5 +1,8 @@
-import React from 'react';
+import './assets/Reset.scss';
+import './assets/_variables.scss';
+import './assets/NavBar.scss';
 import './App.css';
+import React from 'react';
 import Navbar from './components/Navbar';
 import KV from './components/KV';
 import GridTools from './components/GridTools';

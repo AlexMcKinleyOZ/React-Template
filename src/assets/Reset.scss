@@ -1,0 +1,26 @@
+@import 'variables';
+
+* {
+   -webkit-tap-highlight-color: transparent; 
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-background;
+}
+
+h1, h2, h3, a, p, button {
+    color: $color-text;
+}

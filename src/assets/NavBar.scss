@@ -1,16 +1,27 @@
+@import 'variables';
+
 .navbar {
   position: sticky;
-  top: 0;
-  background: #fff;
+  top: 1%;
+  left: 5%;
+  background: $color-secondary;
+  border-radius: 20px;
+  border: 1px solid $color-accent-border;
   z-index: 999;
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  box-shadow: 0 2px 5px $color-accent-border;
 
   .header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 1rem;
+    .nav-right {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+    }
   }
 
   .nav-links {
@@ -19,7 +30,7 @@
 
     a {
       text-decoration: none;
-      color: #333;
+      color: $color-text;
       font-weight: 500;
     }
 
@@ -39,17 +50,17 @@
     .bar {
       height: 3px;
       width: 100%;
-      background: #333;
+      background: $color-text;
       transition: 0.3s;
 
       &.open:nth-child(1) {
-        transform: rotate(45deg) translateY(7px);
+        transform: rotate(45deg) translateY(10px);
       }
       &.open:nth-child(2) {
         opacity: 0;
       }
       &.open:nth-child(3) {
-        transform: rotate(-45deg) translateY(-7px);
+        transform: rotate(-45deg) translateY(-10px);
       }
     }
 
@@ -60,19 +71,25 @@
 
   .mobile-menu {
     position: absolute;
-    top: 100%;
-    right: 0;
-    background: #fff;
+    top: 110%;
+    right: -30%;
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-
+    background-color: $color-secondary;
+    box-shadow: 0 5px 15px $color-accent-border;
+    border-radius: 20px;
+    border: 1px solid $color-accent-border;
+    transition: right 0.3s ease;
     a {
       padding: 0.5rem 0;
       text-decoration: none;
-      color: #333;
+      color: $color-text;
       font-weight: 500;
     }
   }
+  .mobile-menu.right-in {
+    right: 0px;
+  }  
+
 }

@@ -1,3 +1,5 @@
+@import 'variables';
+
 .lang-switch {
   display: flex;
   align-items: center;
@@ -8,7 +10,7 @@
 .lang-switch button {
   background: none;
   border: none;
-  color: white;
+  color: $color-text;
   cursor: pointer;
   font-weight: 500;
   padding: 2px 6px;

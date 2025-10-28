@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/Contact.css';
+import '../assets/Contact.scss';
 import { useTranslation } from 'react-i18next'
 
 const Contact: React.FC = () => {

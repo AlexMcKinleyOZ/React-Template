@@ -1,8 +1,10 @@
+@import 'variables';
+
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: gold;
-  color: #111;
+  background-color: $color-accent;
+  color: $color-text;
   font-weight: 600;
   text-decoration: none;
   border-radius: 6px;
@@ -12,5 +14,5 @@
 
 .btn:hover {
   background-color: #ffd700cc;
-  transform: scale(1.05);
+  transform: translateY(-10px) opacity(0.9);
 }

@@ -26,6 +26,8 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="nav-right">
+          <LangSwitch />
+
           {/* Desktop links */}
           <nav className="nav-links">
             <a href="#top">{t('header.top')}</a>
@@ -35,15 +37,19 @@ const Navbar: React.FC = () => {
           </nav>
 
           {/* Hamburger for mobile/tablet */}
-          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <div className="hamburger" onClick={() => {
+            if (!menuOpen) {setMenuOpen(true)
+            } else {
+              setMenuOpen(false)}
+            }}>
             <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
             <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
             <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
           </div>
 
           {/* Mobile menu */}
-          {menuOpen && (
-            <div ref={menuRef} className="mobile-menu">
+          {/* {menuOpen && ( */}
+            <div ref={menuRef} className={`mobile-menu ${menuOpen ? 'right-in' : ''}`}>
               <a href="#top" onClick={() => setMenuOpen(false)}>
                 {t('header.top')}
               </a>
@@ -57,9 +63,9 @@ const Navbar: React.FC = () => {
                 {t('header.contact')}
               </a>
             </div>
-          )}
+          {/* )} */}
 
-          <LangSwitch />
+
         </div>
       </div>
     </header>
