@@ -7,4 +7,11 @@
   gap: 20px;
   padding: 60px 20px;
   background-color: variables.$color-primary;
+  width: 100%;
+  height: 60dvh;
 }
+
+#top {
+  scroll-margin-top: none;
+}
+

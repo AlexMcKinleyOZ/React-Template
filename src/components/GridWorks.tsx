@@ -7,8 +7,9 @@ import { useTranslation } from 'react-i18next'
 const GridWorks: React.FC = () => {
     const {t} = useTranslation();
     return (
-        <section id="works" className="grid-works">
+        <section id="works" className="works-section">
             <h2>{t('works.title')}</h2>
+            <div className="grid-works">
             {worksData.map((work: any) => (
               <WorkCard 
                 key={work.id}
@@ -20,6 +21,7 @@ const GridWorks: React.FC = () => {
                 tools={work.tools}
             />
             ))}
+            </div>
         </section>
         );
     };

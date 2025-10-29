@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/GridTools.scss';
 
 interface ToolCardProps {
     img: string,

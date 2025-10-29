@@ -6,11 +6,17 @@ const Navbar: React.FC = () => {
   const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const burgerRef = useRef<HTMLDivElement>(null);
 
   // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+    const target = event.target as Node;
+      if (menuRef.current && 
+          !menuRef.current.contains(target) &&
+          burgerRef.current &&
+          !burgerRef.current.contains(target)
+      ) {
         setMenuOpen(false);
       }
     };
@@ -37,7 +43,9 @@ const Navbar: React.FC = () => {
           </nav>
 
           {/* Hamburger for mobile/tablet */}
-          <div className="hamburger" onClick={() => {
+          <div  ref={burgerRef}
+                className="hamburger" 
+                onClick={() => {
             if (!menuOpen) {setMenuOpen(true)
             } else {
               setMenuOpen(false)}
@@ -46,28 +54,25 @@ const Navbar: React.FC = () => {
             <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
             <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
           </div>
-
-          {/* Mobile menu */}
-          {/* {menuOpen && ( */}
-            <div ref={menuRef} className={`mobile-menu ${menuOpen ? 'right-in' : ''}`}>
-              <a href="#top" onClick={() => setMenuOpen(false)}>
-                {t('header.top')}
-              </a>
-              <a href="#tools" onClick={() => setMenuOpen(false)}>
-                {t('header.tools')}
-              </a>
-              <a href="#works" onClick={() => setMenuOpen(false)}>
-                {t('header.works')}
-              </a>
-              <a href="#contact" onClick={() => setMenuOpen(false)}>
-                {t('header.contact')}
-              </a>
-            </div>
-          {/* )} */}
-
-
         </div>
       </div>
+          {/* Mobile menu */}
+          {/* {menuOpen && ( */}
+          <div ref={menuRef} className={`mobile-menu ${menuOpen ? 's-right-in' : ''}`}>
+            <a href="#top" onClick={() => setMenuOpen(false)}>
+              {t('header.top')}
+            </a>
+            <a href="#tools" onClick={() => setMenuOpen(false)}>
+              {t('header.tools')}
+            </a>
+            <a href="#works" onClick={() => setMenuOpen(false)}>
+              {t('header.works')}
+            </a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+              {t('header.contact')}
+            </a>
+          </div>
+          {/* )} */}
     </header>
   );
 };

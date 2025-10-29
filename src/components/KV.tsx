@@ -8,7 +8,7 @@ const KV: React.FC = () => {
 
     return (
         <section id="top" className="top">
-            <div className="overlay-dark"></div>
+            {/* <div className="overlay-dark"></div> */}
             {/* <video src="null" ></video> */}
             <div className="container-section">
                 <div className="pair-box">            

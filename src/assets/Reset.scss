@@ -1,7 +1,8 @@
-@import 'variables';
+@use 'variables';
 
 * {
-   -webkit-tap-highlight-color: transparent; 
+   -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
 }
 
 a {
@@ -18,9 +19,13 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    background-color: $color-background;
+    background-color: variables.$color-primary;
 }
 
 h1, h2, h3, a, p, button {
-    color: $color-text;
+    color: variables.$color-text;
+}
+
+section {
+    scroll-margin-top: 80px;
 }
