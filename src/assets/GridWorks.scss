@@ -1,12 +1,12 @@
-@import 'variables';
+@use 'variables';
 
-.grid-tools {
+.grid-works {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 60px 20px;
-  background-color: #111;
+  background-color: variables.$color-primary;
 }
 
 .tool-card {
@@ -15,7 +15,7 @@
   justify-content: center;
   width: 120px;
   height: 120px;
-  background-color: #222;
+  background-color: variables.$color-secondary;
   border-radius: 8px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -27,5 +27,5 @@
 
 .tool-card:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 15px gold;
+  box-shadow: 0 0 15px variables.$color-accent-border;
 }

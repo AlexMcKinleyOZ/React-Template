@@ -1,12 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import '../assets/KV.scss';
 // import Button from "./Button";
 
 const KV: React.FC = () => {
     const {t} = useTranslation();
 
     return (
-        <section id="top">
+        <section id="top" className="top">
             <div className="overlay-dark"></div>
             {/* <video src="null" ></video> */}
             <div className="container-section">

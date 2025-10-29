@@ -1,0 +1,10 @@
+@use 'variables';
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+  background-color: variables.$color-primary;
+}

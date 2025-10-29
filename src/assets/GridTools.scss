@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 .grid-tools {
   display: flex;
@@ -6,26 +6,25 @@
   justify-content: center;
   gap: 20px;
   padding: 60px 20px;
-  background-color: #111;
+  background-color: variables.$color-background;
 }
 
 .tool-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 120px;
-  background-color: #222;
-  border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  // transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .tool-card img {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.tool-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px gold;
-}
+// .tool-card:hover {
+//   transform: scale(1.1);
+//   box-shadow: 0 0 15px gold;
+// }
